@@ -1,0 +1,20 @@
+// Vendors
+@import 'vendor/bootstrap/bootstrap';
+@import 'swiper.min.scss';
+
+// Base
+// @import 'base/reset';
+// @import 'base/fonts';
+// @import 'base/helpers';
+// @import 'base/typography';
+@import 'base/variables';
+@import 'base/mixins';
+
+// Layout
+@import 'layout/layout';
+@import 'layout/header';
+@import 'layout/swiper';
+// @import 'layout/nav';
+// @import 'layout/footer';
+
+// Components
