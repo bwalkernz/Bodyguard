@@ -4,8 +4,8 @@
 
 // Base
 // @import 'base/reset';
-// @import 'base/fonts';
-// @import 'base/helpers';
+@import 'base/fonts';
+@import 'base/helpers';
 // @import 'base/typography';
 @import 'base/variables';
 @import 'base/mixins';
@@ -14,7 +14,8 @@
 @import 'layout/layout';
 @import 'layout/header';
 @import 'layout/swiper';
+@import 'layout/tiles';
 // @import 'layout/nav';
-// @import 'layout/footer';
+@import 'layout/footer';
 
 // Components

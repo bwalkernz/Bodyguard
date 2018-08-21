@@ -4,36 +4,29 @@ var core = function($) {
 
 
     var init = function() {
-    	//List functions here
-    	mySwiper();
+    	mySwiper_a();
+        mySwiper_b();
     };
 
-    var mySwiper = function() {
+    var mySwiper_a = function() {
 
-        var mySwiper = new Swiper('.swiper-container', {
-            // slidesPerView: 2,
-            // spaceBetween: 20,
-          centeredSlides: true,
+        var mySwiper_a = new Swiper('.swiper-a', {
+          slidesPerView: 'auto',
+          spaceBetween: 15,
 
           pagination: {
             el: '.swiper-pagination',
             type: 'progressbar',
           },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
+        });
+    };
 
-          breakpoints: {
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            576: {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-          }
+    var mySwiper_b = function() {
+
+        var mySwiper_b = new Swiper('.swiper-b', {
+          pagination: {
+            el: '.swiper-pagination',
+          },
         });
     };
     

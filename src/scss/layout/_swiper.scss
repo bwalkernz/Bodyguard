@@ -1,23 +1,95 @@
-.swiper-container {
-      width: 100%;
-      height: 100%;
-    }
+.section__swiper {
+  margin-top: 40px;
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 40px;
+    
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      background: #fff;
+      height: 140px;
+      width: 58%;
 
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
+      @media screen and (min-width: $break-point-sm) {
+        width: 40%;
+      }
+
+      &:first-child {
+        width: 12%;
+        position: relative;
+
+        @media screen and (min-width: $break-point-sm) {
+          width: 7%;
+        }
+
+        .rotate-label {
+          font-family: $font-family-sans-serif-condensed;
+          font-size: 24px;
+          -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+          -ms-transform-origin: right top 0;
+          transform-origin: right top 0;
+          color: $white;
+          position: absolute;
+          width: 140px;
+          left: -130px;
+        }
+      }
+
+      a {
+        height: 100%;
+        width: 100%;
+        display: block;
+        @include border-type;
+        @include swiper-vertical-center;
+
+        p {
+          color: $white;
+          font-family: $font-family-sans-serif-condensed;
+          font-size: 24px;
+          margin-bottom: 0;
+          line-height: 24px;
+        }
+        span {
+          display: block;
+        }
+        .sub-title {
+          color: $white;
+          font-family: $font-family-base;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+        .location {
+          color: $yellow;
+          margin-bottom: 5px;
+          position: relative;
+          padding-left: 20px;
+          display: inline-block;
+
+          .fa-map-marker-alt {
+            font-size: 16px;
+            margin-right: 5px;
+            position: absolute;
+            left: 5px;
+            top: 3px;
+          }
+        }
+      }
     }
+  }
+
+  .swiper-container-horizontal>.swiper-pagination-progressbar {
+    bottom: 5px;
+    top: auto;
+    height: 2px;
+    width: 94%;
+    left: 3%;
+    background: rgba(255,255,255,.3);
+
+    .swiper-pagination-progressbar-fill {
+      background: $white;
+    }
+  }
+}
